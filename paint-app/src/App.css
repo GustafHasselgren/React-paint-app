@@ -1,1 +1,14 @@
 
+.scheme-list {
+  display: flex;
+}
+
+.scheme {
+  flex: 50%;
+  border: 2px solid red;
+}
+
+.scheme-img{
+  max-width: 100%;
+  height: auto;
+}
