@@ -1,14 +1,27 @@
+* {
+  box-sizing: border-box;
+}
 
 .scheme-list {
-  display: flex;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .scheme {
-  flex: 50%;
-  border: 2px solid red;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.scheme-img{
+.scheme-img {
+  object-fit: cover;
   max-width: 100%;
   height: auto;
+}
+
+.scheme-text {
+  text-align: center;
+  padding: 0.5rem;
 }

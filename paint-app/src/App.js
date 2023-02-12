@@ -5,13 +5,13 @@ import SchemesList from './components/SchemesList';
 import Scheme from './components/Scheme';
 
 function App() {
-  const [schemesList, setSchemesList] = useState([Scheme, Scheme])
+  const [schemesList, setSchemesList] = useState([Scheme, Scheme,])
 
   
 
   return (
     <SchemesList schemesList = {schemesList}></SchemesList>
   );
-}
+};
 
 export default App;
