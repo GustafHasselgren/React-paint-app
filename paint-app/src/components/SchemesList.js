@@ -7,7 +7,7 @@ export default function SchemesList({schemesList}) {
     return (
         <div className="scheme-list">
             {schemesList.map((scheme) => {
-                return <Scheme key={uuidv4()}/>
+                return <Scheme key={uuidv4()} id={uuidv4}/>
             })}
         </div>
     );

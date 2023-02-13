@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-size: 0.9rem;
 }
 
 .scheme-list {
@@ -11,6 +12,7 @@
 
 .scheme {
   overflow: hidden;
+  display: block;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -27,12 +29,15 @@
 }
 
 .navbar {
+  background-color: white;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   gap: 1rem;
-  border-bottom: 2px solid red;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navbar-button {
