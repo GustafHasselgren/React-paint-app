@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, {useState, useRef, useEffect} from 'react';
-import SchemesList from './components/SchemesList';
-import Scheme from './components/Scheme';
 import Navbar from './components/navbar';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import About from './components/routes/about';
+import Home from './components/routes/home';
+import SchemeAreas from './components/routes/schemeAreas';
 
-function App() {
-  const [schemesList, setSchemesList] = useState([Scheme, Scheme,])
-
-  function addScheme(scheme) {
-    setSchemesList((schemesList) => {
-      return [...schemesList, scheme];
-    });
-  };
+export default function App() {
+  
 
   return (
-    <div>
-      <Navbar addScheme={addScheme}></Navbar>
-      <SchemesList schemesList = {schemesList}></SchemesList>
-    </div>
+      <Router>
+        <div>
+          <Navbar addScheme={() => {}}></Navbar>
+          <Routes>
+            <Route exact path='/' element={< Home />}></Route>
+            <Route exact path='/about' element={< About />}></Route>
+            <Route path='/scheme/' element={< SchemeAreas />}></Route>
+          </Routes>
+        </div>
+      </Router>
   );
 };
 
-export default App;

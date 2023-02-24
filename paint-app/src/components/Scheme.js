@@ -1,16 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Scheme({id}) {
 
-
     return (
-        <div className="scheme" onClick={() => {/*Callback till nästa route med ID i URL*/}}>
-            <div>
-                <img className="scheme-img" src={`${process.env.PUBLIC_URL}/assets/images/Warhammer-logo.png`}></img>
+        <Link to='scheme/' state={{id:id}}>
+            <div className="scheme">
+                <div>
+                    <img className="scheme-img" src={`${process.env.PUBLIC_URL}/assets/images/Warhammer-logo.png`}></img>
+                </div>
+                <div className="scheme-text">
+                    {id}
+                </div>
             </div>
-            <div className="scheme-text">
-                text goes here
-            </div>
-        </div>
+        </Link>
     );
 };
