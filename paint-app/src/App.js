@@ -17,7 +17,7 @@ export default function App() {
           <Routes>
             <Route exact path='/' element={< Home />}></Route>
             <Route exact path='/about' element={< About />}></Route>
-            <Route path='/scheme/' element={< SchemeAreas />}></Route>
+            <Route path='/scheme/:schemeId' element={< SchemeAreas />}></Route>
           </Routes>
         </div>
       </Router>

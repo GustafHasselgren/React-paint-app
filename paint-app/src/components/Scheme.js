@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Scheme({id}) {
 
     return (
-        <Link to='scheme/' state={{id:id}}>
+        <Link to={'scheme/:' + id} state={{id:id}}>
             <div className="scheme">
                 <div>
                     <img className="scheme-img" src={`${process.env.PUBLIC_URL}/assets/images/Warhammer-logo.png`}></img>
