@@ -6,17 +6,20 @@ var testAreas = [{area: 'Weapons',
                 steps: 
                     [{paint: 'red', method: 'base layer'}, 
                     {paint: 'red', method: 'base layer'}, 
-                    {paint: 'red', method: 'base layer'}]},
+                    {paint: 'red', method: 'base layer'}]
+                },
                 {area: 'Armor', 
                 steps: 
                     [{paint: 'red', method: 'base layer'}, 
                     {paint: 'red', method: 'base layer'}, 
-                    {paint: 'red', method: 'base layer'}]},
+                    {paint: 'red', method: 'base layer'}]
+                },
                 {area: 'Clothes', 
                 steps: 
                     [{paint: 'red', method: 'base layer'}, 
                     {paint: 'red', method: 'base layer'}, 
-                    {paint: 'red', method: 'base layer'}]},
+                    {paint: 'red', method: 'base layer'}]
+                },
                 ];
 
 export default function SchemeAreas() {

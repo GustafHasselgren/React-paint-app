@@ -8,7 +8,7 @@ export default function AreaList({schemeAreas}) {
         <div className="area-list">
             {
                 schemeAreas.map((area) => {
-                    return <Area key={uuidv4()}name={area}></Area>
+                    return <Area key={uuidv4()} data={area}></Area>
                 })
             }
         </div>
