@@ -45,6 +45,14 @@
   padding: 0.5rem;
 }
 
+.area-dropdown {
+  display: inline-flexbox;
+}
+
+.area-dropdown > div > span {
+  padding: 0.5rem;
+}
+
 .navbar {
   background-color: white;
   display: flex;
