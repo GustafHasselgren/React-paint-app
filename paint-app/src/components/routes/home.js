@@ -1,12 +1,22 @@
 import SchemesList from "../SchemesList";
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { useState, useEffect } from "react";
+import { fetchSchemes } from "../../api";
 
-var schemes = [uuidv4(), uuidv4()]
+
 
 
 export default function Home () {
-    const [schemesList, setSchemesList] = useState(schemes)
+    const [schemesList, setSchemesList] = useState([])
+    useEffect(() => {
+      const getSchemes = async () => {
+        const schemes = await fetchSchemes()
+
+        setSchemesList(schemes);
+      }
+      getSchemes();
+      },[])
+
+
 
     function addScheme(scheme) {
     setSchemesList((schemesList) => {
