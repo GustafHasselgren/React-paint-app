@@ -17,3 +17,11 @@ export async function fetchScheme(id) {
 
     return response
 }
+
+export async function fetchPaints() {
+    let response = await fetch(base_url + '/paints')
+    .then((response) => response.json())
+    .then((data) => data)
+
+    return response
+}

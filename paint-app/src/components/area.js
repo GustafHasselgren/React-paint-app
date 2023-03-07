@@ -1,25 +1,31 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-export default function Area({area}) {
+export default function Area({area, paints}) {
 
     const [isDown, setIsDown] = useState(false);
     const toggleDropdown = () => {setIsDown(!isDown)};
+
 
     return (
         <div className='area' onClick={toggleDropdown}>
             <p className="area-text">{area.name}</p>
             {isDown && <div  className='area-dropdown'>
+                {/* Skapa tre kolumner via css */}
                 <div>
                     <span>Paint</span>
+                    <span>Type</span>
                     <span>Method</span>
                 </div>
                 {area.steps.map((step) => {
+
+                    let paintId = step.paint.$oid
+                    let paint = paints.find(paint => paint._id.$oid === paintId);
                     return (
                         <div key={uuidv4()}>
                             
-                            {/*Visa rätt färg baserat på objectId 
-                            Ny fetch? Göra samtidigt som arean?*/}
+                            <span>{paint.name}</span>
+                            <span>{paint.type}</span>
                             <span>{step.method}</span>
                         </div>
                 )})}
