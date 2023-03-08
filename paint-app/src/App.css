@@ -3,6 +3,8 @@
   font-size: 0.9rem;
 }
 
+
+
 #root {
   background-color: lightgray;
   height: 100vh;
@@ -55,6 +57,7 @@ a:active {
   background-color: white;
   border-radius: 0.75rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
 }
 
 .area-text {
@@ -88,4 +91,32 @@ a:active {
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 50%;
+}
+
+h3.area-sidebar-headline {
+  margin: 0;
+}
+
+.area-sidebar {
+  height: 100%;
+  z-index: 1;
+  width: 70%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+}
+
+input {
+  display: block;
+  padding: 0.3rem;
+}
+label {
+  display: block;
+  padding: 0.3rem;
+}
+
+.area-sidebar {
+  padding: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }

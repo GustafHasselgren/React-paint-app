@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-export default function Area({area, paints}) {
+export default function Area({area, paints, toggleSidebar}) {
 
     const [isDown, setIsDown] = useState(false);
     const toggleDropdown = () => {setIsDown(!isDown)};
@@ -16,6 +16,7 @@ export default function Area({area, paints}) {
                     <span>Paint</span>
                     <span>Type</span>
                     <span>Method</span>
+                    <button onClick={() => toggleSidebar(area.name)}>+</button>
                 </div>
                 {area.steps.map((step) => {
 
