@@ -1,14 +1,16 @@
 import React from "react";
 import { useState } from "react";
+import { insertStep } from "../api";
 
-export default function Sidebar({areaName, toggleSidebar}) {
+export default function Sidebar({areaName, toggleSidebar, addStep}) {
 
     const [paint, setPaint] = useState('');
     const [type, setType] = useState('');
     const [method, setMethod] = useState('');
 
-    const handleSubmit = (event) => {
+    function handleSubmit  (event) {
         event.preventDefault();
+        addStep(areaName, paint, type, method);
     }
 
     return (

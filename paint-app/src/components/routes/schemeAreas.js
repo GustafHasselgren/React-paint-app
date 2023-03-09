@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 import AreaList from "../areaList";
 import Sidebar from "../sidebar";
-import { fetchScheme } from "../../api";
+import { fetchScheme, insertStep } from "../../api";
 
 
 
@@ -26,11 +26,17 @@ export default function SchemeAreas() {
         setSidebar(!showSidebar);
     };
 
+    async function addStep(areaName, paint, type, method) {
+        const scheme = await insertStep(schemeId, areaName, paint, type, method);
+
+        setAreas(scheme.areas);
+    }
+
     return (
         <div>
             
             <AreaList schemeAreas={areaList} toggleSidebar={toggleSidebar}></AreaList>
-            {showSidebar && <Sidebar areaName={sidebarAreaName} toggleSidebar={toggleSidebar}></Sidebar>
+            {showSidebar && <Sidebar areaName={sidebarAreaName} toggleSidebar={toggleSidebar} addStep={addStep}></Sidebar>
                 
             
             }

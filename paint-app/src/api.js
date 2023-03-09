@@ -25,3 +25,27 @@ export async function fetchPaints() {
 
     return response
 }
+
+export async function insertStep(schemeId, areaName, paint, type, method) {
+
+    let data = {
+        'schemeId': schemeId,
+        'areaName': areaName,
+        'paint': paint,
+        'type': type,
+        'method': method
+    };
+
+    let response = await fetch(base_url + '/step', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then((response) => response.json())
+    .then((data) => data)
+
+    return response
+}
